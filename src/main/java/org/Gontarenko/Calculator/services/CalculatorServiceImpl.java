@@ -15,7 +15,7 @@ public class CalculatorServiceImpl implements CalculatorService{
         if(averageSalaryIsValid(averageSalary) && vacationDaysIsValid(vacationDays) &&
                 startDateIsValid(startDate)){
             int vacationDaysWithHolidays = getVacationDaysWithHolidays(startDate, vacationDays);
-            vacationPayments = (averageSalary/12) / 29.3 * vacationDaysWithHolidays;
+            vacationPayments = (averageSalary) / 29.3 * vacationDaysWithHolidays;
         }
         return String.valueOf(vacationPayments);
     }
@@ -24,7 +24,7 @@ public class CalculatorServiceImpl implements CalculatorService{
     public String calculatePay(Double averageSalary, Integer vacationDays) {
         double vacationPayments = 0;
         if(averageSalaryIsValid(averageSalary) && vacationDaysIsValid(vacationDays)){
-            vacationPayments =(averageSalary/12) / 29.3 * vacationDays;
+            vacationPayments =(averageSalary) / 29.3 * vacationDays;
         }
         return String.valueOf(vacationPayments);
     }
